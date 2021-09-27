@@ -27,6 +27,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = welcomeVC
         }
         window?.makeKeyAndVisible()
+        
+        AuthManager.shared.refreshIfNeeded { success in
+            print(success)
+        }
     }
  
 

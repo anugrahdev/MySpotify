@@ -28,6 +28,9 @@
 		9C588AA82700D4D100B785F9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C588AA02700D4D100B785F9 /* TabBarViewController.swift */; };
 		9C588AA92700D4D100B785F9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C588AA32700D4D100B785F9 /* WelcomeViewController.swift */; };
 		9C588AAC2700D58B00B785F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C588AAB2700D58B00B785F9 /* Constants.swift */; };
+		9CDA661A2701F2A60048CD7A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA66192701F2A60048CD7A /* Keys.swift */; };
+		9CDA661E2701F2F50048CD7A /* AuthUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA661D2701F2F50048CD7A /* AuthUserDefault.swift */; };
+		9CDA66212701F5F80048CD7A /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA66202701F5F80048CD7A /* AuthResponse.swift */; };
 		F84F9F16102740686D34C633 /* Pods_MySpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5F672DC88C61ED36A9420 /* Pods_MySpotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		9C588AA32700D4D100B785F9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C588AAB2700D58B00B785F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C6438928D7888E413FEBA0C /* Pods-MySpotify-MySpotifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpotify-MySpotifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-MySpotify-MySpotifyUITests/Pods-MySpotify-MySpotifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CDA66192701F2A60048CD7A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		9CDA661D2701F2F50048CD7A /* AuthUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserDefault.swift; sourceTree = "<group>"; };
+		9CDA66202701F5F80048CD7A /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		C12D84F0702116EC58CE83A8 /* Pods-MySpotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpotify.debug.xcconfig"; path = "Target Support Files/Pods-MySpotify/Pods-MySpotify.debug.xcconfig"; sourceTree = "<group>"; };
 		C7E5F672DC88C61ED36A9420 /* Pods_MySpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD83486B72ABDFC0A6C59E6 /* Pods-MySpotifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpotifyTests.release.xcconfig"; path = "Target Support Files/Pods-MySpotifyTests/Pods-MySpotifyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 		9C588A4F2700CF4800B785F9 /* MySpotify */ = {
 			isa = PBXGroup;
 			children = (
+				9CDA661B2701F2DB0048CD7A /* Data */,
 				9C588AAA2700D58200B785F9 /* Utils */,
 				9C588A932700D4D100B785F9 /* Menu */,
 				9C588A8B2700D45E00B785F9 /* Extensions */,
@@ -247,6 +254,7 @@
 		9C588A972700D4D100B785F9 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9CDA661F2701F5E70048CD7A /* Models */,
 				9C588A982700D4D100B785F9 /* Views */,
 			);
 			path = Auth;
@@ -311,9 +319,42 @@
 		9C588AAA2700D58200B785F9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9C588AAB2700D58B00B785F9 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9CDA661B2701F2DB0048CD7A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9CDA66222701F6F10048CD7A /* Constants */,
+				9CDA661C2701F2E20048CD7A /* UserDefaults */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9CDA661C2701F2E20048CD7A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9CDA661D2701F2F50048CD7A /* AuthUserDefault.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		9CDA661F2701F5E70048CD7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CDA66202701F5F80048CD7A /* AuthResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CDA66222701F6F10048CD7A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9C588AAB2700D58B00B785F9 /* Constants.swift */,
+				9CDA66192701F2A60048CD7A /* Keys.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		D9E3DFAED341E348C3E39A24 /* Pods */ = {
@@ -571,7 +612,9 @@
 				9C588AA72700D4D100B785F9 /* SearchViewController.swift in Sources */,
 				9C588A922700D45E00B785F9 /* AuthManager.swift in Sources */,
 				9C588A552700CF4800B785F9 /* ViewController.swift in Sources */,
+				9CDA661A2701F2A60048CD7A /* Keys.swift in Sources */,
 				9C588AA82700D4D100B785F9 /* TabBarViewController.swift in Sources */,
+				9CDA661E2701F2F50048CD7A /* AuthUserDefault.swift in Sources */,
 				9C588AA42700D4D100B785F9 /* HomeViewController.swift in Sources */,
 				9C588AA92700D4D100B785F9 /* WelcomeViewController.swift in Sources */,
 				9C588A912700D45E00B785F9 /* UIViewController.swift in Sources */,
@@ -581,6 +624,7 @@
 				9C588AAC2700D58B00B785F9 /* Constants.swift in Sources */,
 				9C588AA52700D4D100B785F9 /* AuthViewController.swift in Sources */,
 				9C588A532700CF4800B785F9 /* SceneDelegate.swift in Sources */,
+				9CDA66212701F5F80048CD7A /* AuthResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

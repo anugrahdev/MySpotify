@@ -1,10 +1,3 @@
-//
-//  WelcomeViewController.swift
-//  MySpotify
-//
-//  Created by Anang Nugraha on 17/09/21.
-//
-
 import UIKit
 import RxCocoa
 
@@ -18,7 +11,7 @@ class WelcomeViewController: BaseViewController {
         button.setTitleColor(.blue, for: .normal)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Spotify"
@@ -43,8 +36,17 @@ class WelcomeViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         signInButton.frame = CGRect(x: 20, y: view.frame.height-50-view.safeAreaInsets.bottom, width: view.frame.width-40, height: 50)
     }
-
+    
     private func handleSignIn(success:Bool){
+        guard success else {
+            let alert = UIAlertController(title: "Oops", message: "Something wrong when signing in...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
+        let mainAppTabBarVC = TabBarViewController()
+        mainAppTabBarVC.modalPresentationStyle = .fullScreen
+        present(mainAppTabBarVC, animated: true, completion: nil)
     }
 }
