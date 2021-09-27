@@ -10,6 +10,7 @@ target 'MySpotify' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
+  pod 'Alamofire'
 
   target 'MySpotifyTests' do
     inherit! :search_paths
