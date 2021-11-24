@@ -8,12 +8,16 @@
 import Foundation
 @testable import MySpotify
 
-struct MockNetworkService: NetworkServiceDelegate {
-    let getCurrentUserProfileResult: Result<ProfileModel, Error> = .success(ProfileModel())
-
-    func getCurrentUserProfile(completion: @escaping (Result<ProfileModel, Error>) -> Void) {
-        completion(getCurrentUserProfileResult)
-    }
-    
-    
-}
+//struct MockNetworkService: NetworkServiceDelegate {
+//    func getCurrentUserProfile(completion: @escaping (Result<ProfileModel, Error>) -> Void) {
+//        
+//    }
+//    
+////    let getCurrentUserProfileResult: Result<ProfileModel, Error> = .success(ProfileModel())
+////
+////    func getCurrentUserProfile(completion: @escaping (Result<ProfileModel, Error>) -> Void) {
+////        completion(getCurrentUserProfileResult)
+////    }
+//    
+//    
+//}

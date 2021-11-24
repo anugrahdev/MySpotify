@@ -11,6 +11,9 @@ target 'MySpotify' do
   pod 'RxCocoa'
   pod 'Kingfisher'
   pod 'Alamofire'
+  pod 'Wormholy', :configurations => ['Debug']
+  pod 'Appirater'
+  pod 'Firebase/Analytics'
 
   target 'MySpotifyTests' do
     inherit! :search_paths
